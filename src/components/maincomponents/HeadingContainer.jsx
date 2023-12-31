@@ -2,8 +2,7 @@
 import Heading from "../mircrocomponents/Heading"; 
 import Desc from "../mircrocomponents/Desc";
 import MovingSvg from "../mircrocomponents/Satelite";
-import DrawerPannel from "../mircrocomponents/DrawerPannel";
-
+import React from "react";
 
 export default function HeadingContainer(){
    
@@ -14,7 +13,7 @@ export default function HeadingContainer(){
     <Heading/> 
     <Desc/>
     <MovingSvg/>
-    <DrawerPannel/>
+   
     </div>
    
     </>
