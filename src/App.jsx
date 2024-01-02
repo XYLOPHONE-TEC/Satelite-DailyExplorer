@@ -1,11 +1,16 @@
 import HeadingContainer from "./components/maincomponents/HeadingContainer"
 import Panel from "./components/maincomponents/Panel"
+import Tabs from "./components/maincomponents/Tabs"
 function App() {
  
   return (
     <>
-   <HeadingContainer/>
-   <Panel/>
+    <div className=" relative xl:w-[30%] m-auto">
+    <HeadingContainer/>
+    <Panel/>
+    <Tabs/>
+    </div>
+  
     </>
   )
 }

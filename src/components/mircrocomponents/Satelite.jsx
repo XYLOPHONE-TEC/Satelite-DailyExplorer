@@ -1,11 +1,12 @@
 
-import style from "../../../public/css/Satelitesvg.module.css"
+import style from "/public/css/Satelitesvg.module.css"
 export default function MovingSvg( ){
  
 
   return (
     <div className={`${style.movingSvg} -z-10 absolute top-[10px] right-[5%]  md:top-[50px] md:right-[10%] `}  >      
 <svg version="1.1" baseProfile="basic"
+	// eslint-disable-next-line react/no-unknown-property
 	id="svg2" xmlnsinkscape="http://www.inkscape.org/namespaces/inkscape" xmlnssodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlnsdc="http://purl.org/dc/elements/1.1/" xmlnsrdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlnscc="http://creativecommons.org/ns#" xmlnsns1="http://sozi.baierouge.fr" xmlnssvg="http://www.w3.org/2000/svg"
 	xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"  viewBox="0 0 633.1 599.5"
 	xmlSpace="preserve" className="w-[300px] md:w-[400px]">

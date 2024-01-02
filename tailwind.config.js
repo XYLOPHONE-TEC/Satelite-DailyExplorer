@@ -9,13 +9,17 @@ export default {
     screens:{
       xm:"300px",
       sm:"560px",
-      md:"768px",
+      md:"700px",
       mdx:"1024px",
       lg:"1440px",
       xl:"1500px"
     },
    
-    extend: {},
+    extend: {
+      boxShadow:{
+        lg:"rgb(0,0,056) 0px 22px 70px,4px"
+      }
+    },
   },
   plugins: [],
 }

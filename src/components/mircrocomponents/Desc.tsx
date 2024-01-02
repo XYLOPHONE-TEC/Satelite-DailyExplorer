@@ -6,8 +6,8 @@ export default function Desc() {
   const [aware,setAware] =useState()
   let[messagePosition,setMessagePosition]=useState(0)
   const messageArray = [
-    "Where all our daily effort gather to give a great development experience",
-    "Making development space a place of exploration and fun not beyond the lines of knowledge"
+    "Where all our daily efforts gather to give a great development experience",
+    "Making the development space a place of exploration and fun with the power of community"
   ];
   const awarenessText="Select a field of help to generate the snippet. The tool also AI powered for random explainations."
 
