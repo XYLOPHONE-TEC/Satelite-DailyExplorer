@@ -5,10 +5,13 @@ export default function Desc() {
   let [textPosition,setTextPosition]= useState(0);
   const [aware,setAware] =useState()
   let[messagePosition,setMessagePosition]=useState(0)
+ /** Message should not excced 100 characters((a,b,c)===3characters) **/
   const messageArray = [
+    
     "Where all our daily efforts gather to give a great development experience",
     "Making the development space a place of exploration and fun with the power of community"
   ];
+ 
   const awarenessText="Select a field of help to generate the snippet. The tool also AI powered for random explainations."
 
   const num = Math.floor(Math.random() * messageArray.length);
