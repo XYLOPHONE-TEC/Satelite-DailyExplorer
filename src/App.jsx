@@ -1,6 +1,7 @@
 import HeadingContainer from "./components/maincomponents/HeadingContainer"
 import Panel from "./components/maincomponents/Panel"
 import Tabs from "./components/maincomponents/Tabs"
+import Interaction from "./components/maincomponents/Interaction"
 function App() {
  
   return (
@@ -9,6 +10,7 @@ function App() {
     <HeadingContainer/>
     <Panel/>
     <Tabs/>
+    <Interaction/>
     </div>
   
     </>

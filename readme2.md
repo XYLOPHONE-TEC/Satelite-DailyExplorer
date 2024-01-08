@@ -161,3 +161,208 @@ Always show sidenav:
   margin-left: 200px; /* Same as the width of the sidenav */
 } 
 ```
+```json
+  {
+        "property":"1",
+        "more":[
+            {
+                "property":"1.1",
+                "more":[
+                    {
+                        "property":"1.1.1.3",
+                        "more":[
+                            {
+                                "property":"1.1.1.1.4",
+                                "more":[
+                                     {
+                                        "property":"1.1.1.1.1.5",
+                                        "more":[
+                                            {
+                                                "property":"1.1.1.1.1.1.6",
+                                                "more":[
+                                                    {
+                                                        "end":0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "property":"1.2",
+                "more":[
+                    {
+                        "property":"1.2.1.3",
+                        "more":[
+                            {
+                                "property":"1.2.1.1.4",
+                                "more":[
+                                    {
+                                        "property":"1.2.1.1.1.5",
+                                        "more":[
+                                            {
+                                                "property":"1.2.1.1.1.1.6",
+                                                "more":[
+                                                    {
+                                                        "end":0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "property":"1.3",
+                "more":[
+                    {
+                        "property":"1.3.1.3",
+                        "more":[
+                            {
+                                "property":"1.3.1.1.4",
+                                "more":[
+                                    {
+                                        "property":"1.3.1.1.1.5",
+                                        "more":[
+                                            {
+                                                "property":"1.3.1.1.1.1.6",
+                                                "more":[
+                                                    {
+                                                        "end":0
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+```
+
+function flattenNestedArrays(obj) {
+    const result = [];
+  
+    function flatten(obj) {
+      if (obj.more && Array.isArray(obj.more)) {
+        obj.more.forEach(flatten);
+      } else {
+        result.push({ property: obj.property });
+      }
+  
+      if (obj.end !== undefined) {
+        result.push({ end: obj.end });
+      }
+    }
+  
+    flatten(obj);
+  
+    return result;
+  }
+  
+  const nestedArray = {
+    "property": "1",
+    "more": [
+      {
+        "property": "1.1",
+        "more": [
+          {
+            "property": "1.1.1.3",
+            "more": [
+              {
+                "property": "1.1.1.1.4",
+                "more": [
+                  {
+                    "property": "1.1.1.1.1.5",
+                    "more": [
+                      {
+                        "property": "1.1.1.1.1.1.6",
+                        "more": [
+                          {
+                            "end": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "property": "1.2",
+        "more": [
+          {
+            "property": "1.2.1.3",
+            "more": [
+              {
+                "property": "1.2.1.1.4",
+                "more": [
+                  {
+                    "property": "1.2.1.1.1.5",
+                    "more": [
+                      {
+                        "property": "1.2.1.1.1.1.6",
+                        "more": [
+                          {
+                            "end": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "property": "1.3",
+        "more": [
+          {
+            "property": "1.3.1.3",
+            "more": [
+              {
+                "property": "1.3.1.1.4",
+                "more": [
+                  {
+                    "property": "1.3.1.1.1.5",
+                    "more": [
+                      {
+                        "property": "1.3.1.1.1.1.6",
+                        "more": [
+                          {
+                            "end": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+  
+  const flattenedArray = flattenNestedArrays(nestedArray);
+  console.log(flattenedArray);
+  

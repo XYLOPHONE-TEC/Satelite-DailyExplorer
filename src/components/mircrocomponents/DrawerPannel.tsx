@@ -33,9 +33,9 @@ export default function DrawerPannel() {
        <div className={`flex flex-row   fixed  backdrop-opacity-40 backdrop-invert bg-black/30 top-9 right-0 z-20 ${sideBar?"  w-[50%] sm:w-[300px]":" w-0" } xl:absolute`} >
         <button role="button" type="button"className={`icon bg-white p-1 w-[35px] h-[35px] hover:bg-slate-200 ${sideBar?"static bg-zinc-200 ":"fixed top top-9 right-0"}`} onClick={handleClick}>
           {sideBar ? (
-            <GoSidebarCollapse style={styleCollapse} />
+            <GoSidebarCollapse style={styleCollapse}  />
           ) : (
-            <GoSidebarExpand style={styleExpand} />
+            <GoSidebarExpand style={styleExpand}  />
           )}
         </button>
         <div className={`lists w-[100%] ${sideBar?" block":"hidden"} `}>
