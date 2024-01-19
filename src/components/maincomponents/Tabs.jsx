@@ -4,13 +4,13 @@ export default function Tabs(){
     const [tabs, setTabs]=useState([])
     const [dropdowns,setDropDowns]=useState([])
     const [restOfFiles,setRestOfFiles]=useState(false)
-   document.onclick=function(event){
-    if(event.target.className.includes("RestOfFiles")&&restOfFiles){
-      setRestOfFiles(true)
-    } else{
-      setRestOfFiles(false)  
-    }
-   }
+  //  document.onclick=function(event){
+  //   if(event.target.innerHtml.&&restOfFiles){
+  //     setRestOfFiles(true)
+  //   } else{
+  //     setRestOfFiles(false)  
+  //   }
+  //  }
     useEffect(()=>{
          let fullArray = filesAvailable.length+1
          setTabs(filesAvailable.slice(0,3))

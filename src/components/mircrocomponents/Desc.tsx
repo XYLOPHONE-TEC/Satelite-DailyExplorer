@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React from "react";
 import Awareness from "./Awareness";
 export default function Desc() {
   const [hello, setHello] = useState();
@@ -17,29 +18,33 @@ export default function Desc() {
   const num = Math.floor(Math.random() * messageArray.length);
   const rounded = Math.round(num);
   const message = messageArray.find((item, index) => index == rounded);
-  useEffect(() => {
-    const TypeWriter = () => {
-      const sent = message.substring(0, textPosition);
-      setHello(sent);
-      if (textPosition !== message.length) {
-        setTextPosition(textPosition++)
-        setTimeout(TypeWriter, 100);
-      } else{
-        const AwarenessMessage=()=>{
-         const wordMessage=awarenessText.substring(0,messagePosition)
-         setAware(wordMessage)
-         if(messagePosition!==awarenessText.length){
-          setMessagePosition(messagePosition++)
-          setTimeout(AwarenessMessage,100)
-         }
+ 
+
+useEffect(() => {
+  const TypeWriter = () => {
+    const sent = message.substring(0, textPosition);
+    setHello(sent);
+
+    if (textPosition !== message.length) {
+      setTextPosition(textPosition++);
+      setTimeout(TypeWriter, 50);
+    } else {
+      const AwarenessMessage = () => {
+        const wordMessage = awarenessText.substring(0, messagePosition);
+        setAware(wordMessage);
+
+        if (messagePosition !== awarenessText.length) {
+          setMessagePosition(messagePosition++);
+          setTimeout(AwarenessMessage, 50);
         }
-        AwarenessMessage()
-      }
-    };
+      };
 
-    TypeWriter();
-  }, []); 
+      AwarenessMessage();
+    }
+  };
 
+  TypeWriter();
+}, []); 
   return (
     <>
       <h3 className="text-white text-lg font-mono p-10 pt-5 pb-2 z-10 md:px-20 md:text-xl mdx:w-[85%] mdx:m-auto ">{hello}</h3>

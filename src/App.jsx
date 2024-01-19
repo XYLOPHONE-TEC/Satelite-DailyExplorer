@@ -6,7 +6,7 @@ function App() {
  
   return (
     <>
-    <div className=" relative xl:w-[30%] m-auto">
+    <div className=" relative xl:w-[50%] m-auto">
     <HeadingContainer/>
     <Panel/>
     <Tabs/>
